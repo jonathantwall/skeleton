@@ -1,1 +1,1 @@
-A template/skeleton repo setup for java+bazel
+A template/skeleton repo setup preconfigured for bazel, java, proto, grpc.
