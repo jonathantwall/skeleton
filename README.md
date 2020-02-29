@@ -1,1 +1,1 @@
-# maxwell
+A template/skeleton repo setup for java+bazel
