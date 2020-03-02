@@ -1,0 +1,12 @@
+options:
+  languages: [ "java" ]
+  resolverType: "coursier"
+  strictVisibility: true
+  transitivity: runtime_deps
+  versionConflictPolicy: highest
+
+dependencies:
+  com.google.guava:
+    guava:
+      lang: java
+      version: "28.2-jre"
