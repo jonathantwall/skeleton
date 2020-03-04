@@ -10,7 +10,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 http_archive(
     name = "com_google_dagger",
-#    sha256 = "749d06b6cdeeda12e65fba53389647b8465007b2",
+    sha256 = "749d06b6cdeeda12e65fba53389647b8465007b2",
     urls = ["https://github.com/google/dagger/archive/dagger-2.26.zip"],
     strip_prefix = "dagger-dagger-2.26",
 )
