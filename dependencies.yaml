@@ -6,7 +6,29 @@ options:
   versionConflictPolicy: highest
 
 dependencies:
+  com.google.dagger:
+    dagger:
+      lang: java
+      modules: [ "", "compiler", "producers", "spi" ]
+      version: "2.26"
+
   com.google.guava:
     guava:
       lang: java
       version: "28.2-jre"
+
+  com.google.protobuf:
+    protobuf:
+      lang: java
+      modules: [ "java", "java-util" ]
+      version: "3.0.0-beta-1"
+
+  commons-io:
+    commons-io:
+      lang: java
+      version: "2.6"
+
+  javax.annotation:
+    jsr250-api:
+      lang: java
+      version: "1.0"
