@@ -9,6 +9,13 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 http_archive(
+    name = "com_google_dagger",
+#    sha256 = "749d06b6cdeeda12e65fba53389647b8465007b2",
+    urls = ["https://github.com/google/dagger/archive/dagger-2.26.zip"],
+    strip_prefix = "dagger-dagger-2.26",
+)
+
+http_archive(
     name = "com_google_protobuf",
     sha256 = "9748c0d90e54ea09e5e75fb7fac16edce15d2028d4356f32211cfa3c0e956564",
     strip_prefix = "protobuf-3.11.4",
