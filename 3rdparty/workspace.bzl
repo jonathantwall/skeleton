@@ -68,7 +68,7 @@ def jar_artifact_callback(hash):
 
 def list_dependencies():
     return [
-# duplicates in com.google.code.findbugs:jsr305 promoted to 3.0.2
+# duplicates in com.google.code.findbugs:jsr305 fixed to 3.0.2
 # - com.google.dagger:dagger-compiler:2.26 wanted version 3.0.1
 # - com.google.dagger:dagger-spi:2.26 wanted version 3.0.1
 # - com.google.guava:guava:28.2-jre wanted version 3.0.2
