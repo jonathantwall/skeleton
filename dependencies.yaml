@@ -6,28 +6,39 @@ options:
   versionConflictPolicy: highest
 
 dependencies:
+  # https://mvnrepository.com/artifact/com.google.dagger/dagger
   com.google.dagger:
     dagger:
       lang: java
       modules: [ "", "compiler", "producers", "spi" ]
       version: "2.26"
 
+  # https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
+  com.google.findbugs:
+    findbugs:
+      lang: java
+      version: "3.0.2"
+
+  # https://mvnrepository.com/artifact/com.google.guava/guava
   com.google.guava:
     guava:
       lang: java
       version: "28.2-jre"
 
+  # https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
   com.google.protobuf:
     protobuf:
       lang: java
       modules: [ "java", "java-util" ]
       version: "3.0.0-beta-1"
 
+  # https://mvnrepository.com/artifact/commons-io/commons-io
   commons-io:
     commons-io:
       lang: java
       version: "2.6"
 
+  # https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api
   javax.annotation:
     jsr250-api:
       lang: java
