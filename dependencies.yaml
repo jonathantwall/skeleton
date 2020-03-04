@@ -14,15 +14,7 @@ dependencies:
   com.google.dagger:
     dagger:
       lang: java
-      modules: [ "compiler", "producers", "spi" ]
-      version: "2.26"
-    dagger-compiler:
-      exports:
-        - "com.google.dagger:dagger"
-        - "com.google.dagger:producers"
-        - "com.google.dagger:spi"
-      lang: java
-      processorClasses: [ "dagger.internal.codegen.ComponentProcessor" ]
+      modules: [ "", "compiler", "producers", "spi" ]
       version: "2.26"
 
   com.google.guava:
