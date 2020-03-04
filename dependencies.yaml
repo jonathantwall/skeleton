@@ -6,6 +6,11 @@ options:
   versionConflictPolicy: highest
 
 dependencies:
+  com.google.code.findbugs:
+    jsr305:
+      lang: java
+      version: "3.0.2"
+
   com.google.dagger:
     dagger:
       lang: java
@@ -32,3 +37,8 @@ dependencies:
     jsr250-api:
       lang: java
       version: "1.0"
+
+  javax.inject:
+    javax.inject:
+      lang: java
+      version: "1"

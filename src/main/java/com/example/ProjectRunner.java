@@ -1,7 +1,10 @@
 package com.example;
 
 public class ProjectRunner {
-    public static void main(String args[]) {
-        Greeting.sayHi();
-    }
+  public static void main(String args[]) {
+    // TODO - make sure we are running the component compiler and uncomment.
+    // ToyApp toyApp = DaggerGreeting_ToyComponent.builder().build().toyApp();
+    // toyApp.greeting.sayHello();
+    Greeting.sayHi();
+  }
 }
