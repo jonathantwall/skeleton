@@ -13,6 +13,6 @@ java_binary(
         "@third_party_jvm//3rdparty/jvm/com/google/dagger:dagger_producers",
         "@third_party_jvm//3rdparty/jvm/com/google/code/findbugs:jsr305",
         "@third_party_jvm//3rdparty/jvm/javax/annotation:jsr250_api",
-#        "@third_party_jvm//3rdparty/jvm/javax/inject:javax_inject",
+        "@third_party_jvm//3rdparty/jvm/javax/inject:javax_inject",
     ],
 )
