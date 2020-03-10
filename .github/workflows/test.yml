@@ -1,0 +1,39 @@
+name: Unit tests
+on:
+  push:
+jobs:
+  unittests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Bazel output cache
+        id: cache-bazel
+        uses: actions/cache@v1
+        with:
+          path: "${{ github.workspace }}/.bazel-cache"
+          key: ${{ runner.os }}-bazel-out-${{ github.run_id}}
+          restore-keys: |
+            ${{ runner.os }}-bazel-out-
+      - name: Configure bazel config for actions
+        run: |
+          echo "build --config github_actions" > user.bazelrc
+          echo "startup --host_jvm_args=-Xmx2000m" >> user.bazelrc
+          echo "startup --host_jvm_args=-Xms2000m" >> user.bazelrc
+          echo "build --disk_cache ${{ github.workspace }}/.bazel-cache/disk-cache" >> user.bazelrc
+          echo "build --repository_cache ${{ github.workspace }}/.bazel-cache/repo-cache" >> user.bazelrc
+     - name: run build
+        run: ./bazel build src/...
+        env:
+          BAZEL_VERSION: ${{ matrix.bazel_version }}
+          BAZEL_INSTALLER_SHA: ${{ matrix.bazel_installer_sha }}
+          BAZEL_BIN_LOC: "${{ github.workspace }}/.bazel-cache/bazel-bin"
+      - name: run tests
+        run: ./bazel test src/...
+        env:
+          BAZEL_VERSION: ${{ matrix.bazel_version }}
+          BAZEL_INSTALLER_SHA: ${{ matrix.bazel_installer_sha }}
+          BAZEL_BIN_LOC: "${{ github.workspace }}/.bazel-cache/bazel-bin"
