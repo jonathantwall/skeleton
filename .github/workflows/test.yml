@@ -25,7 +25,7 @@ jobs:
           echo "startup --host_jvm_args=-Xms2000m" >> user.bazelrc
           echo "build --disk_cache ${{ github.workspace }}/.bazel-cache/disk-cache" >> user.bazelrc
           echo "build --repository_cache ${{ github.workspace }}/.bazel-cache/repo-cache" >> user.bazelrc
-     - name: run build
+      - name: run build
         run: ./bazel build src/...
         env:
           BAZEL_VERSION: ${{ matrix.bazel_version }}
