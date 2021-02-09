@@ -10,6 +10,9 @@ java_binary(
 java_library(
     name = "greeter",
     srcs = ["src/main/java/com/example/Greeting.java"],
+    plugins = [
+	    "//third_party:dagger_compiler_plugin",
+    ],
     visibility = ["//src/main/java/com/example/cmdline:__pkg__"],
     deps = [
         "@third_party_jvm//3rdparty/jvm/com/google/guava:guava",
